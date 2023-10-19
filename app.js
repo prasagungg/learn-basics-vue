@@ -8,10 +8,11 @@ const app = Vue.createApp({
       x: 0,
       y: 0,
       books: [
-        { title: "book - 1", author: "agung" },
-        { title: "book - 2", author: "agung" },
-        { title: "book - 3", author: "agung" },
+        { title: "book - 1", author: "agung", img: "img/book-1.jpg" },
+        { title: "book - 2", author: "agung", img: "img/book-2.jpg" },
+        { title: "book - 3", author: "agung", img: "img/book-3.jpg" },
       ],
+      url: "https://www.youtube.com",
     };
   },
   methods: {
