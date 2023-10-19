@@ -13,6 +13,10 @@
         margin: 20px;
         display: inline-block;
       }
+
+      .fav {
+        background-color: blue;
+      }
     </style>
   </head>
   <body>
@@ -44,17 +48,19 @@
         position - {{x}} - {{y}}
       </div>
 
-      <ul>
-        <li v-for="book in books" :class="{fav: book.isFav }">
-          <img
-            :src="book.img"
-            :alt="book.title"
-            style="width: 20px; height: 20px"
-          />
-          <h3>{{book.title}}</h3>
-          <p>{{book.author}}</p>
-        </li>
-      </ul>
+      <div
+        v-for="book in books"
+        :class="{fav: book.isFav }"
+        @click="changeFav(book)"
+      >
+        <img
+          :src="book.img"
+          :alt="book.title"
+          style="width: 20px; height: 20px"
+        />
+        <h3>{{book.title}}</h3>
+        <p>{{book.author}}</p>
+      </div>
 
       <!-- <a v-bind:href="url">Link Youtube</a> -->
       <a :href="url">Link Youtube</a>
